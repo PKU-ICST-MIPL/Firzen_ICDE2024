@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ```
 ## Prepare Datasets
 
-Our model is evaluated on *Amazon Beauty*, *Amazon Cell Phones and Accessories*, Amazon Clothing Shoes and Jewelry* datasets. 
+Our model is evaluated on *Amazon Beauty*, *Amazon Cell Phones and Accessories*, *Amazon Clothing Shoes and Jewelry* datasets. 
 
 You can download our processed datasets and unzip them to './data' folder:
 
