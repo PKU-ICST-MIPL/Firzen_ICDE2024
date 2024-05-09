@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 Our model is evaluated on *Amazon Beauty*, *Amazon Cell Phones and Accessories*, *Amazon Clothing Shoes and Jewelry* datasets. 
 
-You can download our processed datasets and unzip them to './data' folder:
+You can download our processed datasets and unzip them to your data folder:
 
 - [Baidu Yun Pan](https://pan.baidu.com/s/1sjoatsrC0Dgs9kiRAafxhg): 1207
 
