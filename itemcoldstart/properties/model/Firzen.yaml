@@ -1,0 +1,79 @@
+# dataset config 
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+load_col:
+  inter: [user_id, item_id]
+vision_feature_file: image_feat.npy
+text_feature_file: text_feat.npy
+user_graph_dict_file: "user_graph_dict.npy"
+user_inter_num_interval: "[5,inf)"
+item_inter_num_interval: "[5,inf)"
+
+# model config
+embedding_size: 64
+feat_embedding_size: 64
+weight_decay: 0.0
+req_training: True
+kg_embedding_size: 64 # (int) The embedding size of relations in knowledge graph.
+gnn_layers: [64] # (list of int) The hidden size in GNN layers.
+mess_dropout: 0.1 # (float) The message dropout rate in GNN layer.
+aggregator_type: "bi" # (str) The aggregator type used in GNN. Range in ['gcn', 'graphsage', 'bi'].
+
+model_cat_rate: 1.10 # model_cat_rate
+id_cat_rate: 0.36 # id_cat_rate
+head_num: 4 # head_num_of_multihead_attention
+
+weight_size: [64, 64]
+G_rate: 0.0001
+G_drop1: 0.31
+G_drop2: 0.5
+gp_rate: 1
+real_data_tau: 0.005 # for real_data soft
+ui_pre_scale: 100 # ui_pre_scale
+
+# training config
+eval_batch_size: 4096
+learner: adam
+learning_rate: 0.001
+D_lr: 3e-4
+learning_rate_scheduler: [1.0, 50]
+use_neg_sampling: True
+use_full_sampling: False
+
+train_neg_sample_args:
+  sample_by: user
+
+dropout: 0.2 # dropout rate
+sparse: 1 # Sparse or dense adjacency matrix
+feat_reg_decay: 1e-5 # feat_reg_decay
+cl_rate: 0.03 # control the effect of the contrastive auxiliary task
+regs: [1e-5, 1e-5, 1e-2] # for emb_loss
+
+T: 100 # it for ui update
+tau: 0.5 # 0.5
+m_topk_rate: 0.0001 # for reconstruct
+log_log_scale: 0.00001 # log_log_scale
+adj_momentum: 0.99 # momentum for updating the adj
+importance_momentum: 0.99 # momentum for updating the adj
+
+n_mm_layers: 1 # number of feature graph conv layers
+n_layers: 2
+knn_k: 10
+mm_image_weight: 0.1
+aggr_mode: ["add"]
+reg_weight: 0.001 #[0.1, 0.01, 0.001, 0.0001, 0.00001]
+
+saved_entity_emb: False
+train_mode: KG
+
+# evaluation config
+eval_args:
+  split: { "COLD": [0.8, 0.1, 0.1] }
+  group_by: user
+  order: RO
+  mode: full
+
+metrics: ["Recall", "MRR", "NDCG", "Hit", "Precision"]
+topk: 20
+valid_metric: MRR@20
+eval_handc: True

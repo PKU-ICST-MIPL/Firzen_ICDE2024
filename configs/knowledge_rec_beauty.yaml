@@ -1,0 +1,44 @@
+# Environment Settings for knowledge-aware recommendation models on Amazon_Beauty
+# CKE, KGAT, KGCN, KGNNLS, Firzen
+
+# data config
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+HEAD_ENTITY_ID_FIELD: head_id
+TAIL_ENTITY_ID_FIELD: tail_id
+RELATION_ID_FIELD: relation_id
+ENTITY_ID_FIELD: entity_id
+load_col:
+    inter: [user_id, item_id]
+    kg: [head_id, relation_id, tail_id]
+    link: [item_id, entity_id]
+user_inter_num_interval: "[5,inf)"
+item_inter_num_interval: "[5,inf)"
+
+# model config
+embedding_size: 64
+kg_embedding_size: 64
+reg_weights: [1e-02,1e-02]
+model_cat_rate: 1.10           # model_cat_rate
+id_cat_rate: 0.36
+enable_kg: True
+
+# Training and evaluation config
+train_neg_sample_args:
+    sample_by: user
+eval_args:
+  split: {'COLD':[0.8,0.1,0.1]}
+  order: RO
+  group_by: user
+  mode: full #uni99 #full
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision']
+topk: 20
+valid_metric: MRR@20
+eval_handc: True #False
+save_dataset: False
+log_wandb: False
+
+# multi-modal features
+vision_feature_file: image_feat.npy
+text_feature_file: text_feat.npy
+mm_feature_file: mm_feat.npy
