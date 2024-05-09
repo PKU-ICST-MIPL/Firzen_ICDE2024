@@ -1,5 +1,5 @@
 import argparse
-
+import numpy
 from itemcoldstart.quick_start import run_itemcoldstart, run_itemcoldstarts
 
 if __name__ == "__main__":
