@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## **Firzen: Firing Strict Cold-start Items with Heterogeneous and Homogeneous Graphs for Recommendation**
 
 This is the source code of our ICDE 2024 paper "[Firzen: Firing Strict Cold-start Items with Heterogeneous and Homogeneous Graphs for Recommendation](http://39.108.48.32/mipl/download_paper.php?fileId=202319)".
@@ -41,3 +42,6 @@ Our code references the following projects. Many thanks to the authors.
 - [Recbole](https://github.com/RUCAIBox/RecBole/tree/master/recbole)
 - [MMRec](https://github.com/enoche/MMRec/tree/master)
 - [MMSSL](https://github.com/HKUDS/MMSSL)
+=======
+# Firzen_ICDE2024
+>>>>>>> origin/main
