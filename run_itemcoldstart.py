@@ -1,10 +1,10 @@
 import argparse
-import numpy
+
 from itemcoldstart.quick_start import run_itemcoldstart, run_itemcoldstarts
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", "-m", type=str, default="BPR", help="name of models")
+    parser.add_argument("--model", "-m", type=str, default="Firzen", help="name of models")
     parser.add_argument(
         "--dataset", "-d", type=str, default="Amazon_Beauty", help="name of datasets"
     )
