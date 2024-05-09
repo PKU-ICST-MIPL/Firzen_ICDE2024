@@ -4,7 +4,8 @@ This is the source code of our ICDE 2024 paper "[Firzen: Firing Strict Cold-star
 
 ![image](imgs/pipeline.png)
 
-#### **Installation**
+## **Installation**
+
 ```python
 conda create -n Firzen python=3.8 anaconda
 conda activate Firzen
@@ -12,12 +13,15 @@ conda activate Firzen
 conda install pytorch==1.13.0 pytorch-cuda=11.7 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
-#### **Data Preparation**
+## Prepare Datasets
 
-Our model is evaluated on *Amazon Beauty*, *Amazon Cell Phones and Accessories*, and *Amazon Clothing Shoes and Jewelry* datasets. You can download our processed datasets and unzip it to './data' folder:
+Our model is evaluated on *Amazon Beauty*, *Amazon Cell Phones and Accessories*, Amazon Clothing Shoes and Jewelry* datasets. 
+
+You can download our processed datasets and unzip them to './data' folder:
+
 - [Baidu Yun Pan](https://pan.baidu.com/s/1sjoatsrC0Dgs9kiRAafxhg): 1207
 
-#### **Quick Start**
+## Quick Start
 
 ```python
 # Amazon_Beauty
@@ -30,7 +34,7 @@ python run_itemcoldstart.py --dataset=Amazon_Cell_Phones_and_Accessories --model
 python run_itemcoldstart.py --dataset=Amazon_Clothing_Shoes_and_Jewelry --model=Firzen --config_files=configs/knowledge_rec_clothing.yaml
 ```
 
-#### **Acknowledgement**
+## **Acknowledgement**
 
 Our code references the following projects. Many thanks to the authors.
 
