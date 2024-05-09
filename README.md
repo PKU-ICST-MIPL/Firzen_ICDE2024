@@ -1,4 +1,4 @@
-## **Firzen: Firing Strict Cold-start Items with Heterogeneous and Homogeneous Graphs for Recommendation**
+# **Firzen: Firing Strict Cold-start Items with Heterogeneous and Homogeneous Graphs for Recommendation**
 
 This is the source code of our ICDE 2024 paper "[Firzen: Firing Strict Cold-start Items with Heterogeneous and Homogeneous Graphs for Recommendation](http://39.108.48.32/mipl/download_paper.php?fileId=202319)".
 
